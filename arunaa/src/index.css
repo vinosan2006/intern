@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0a0a0c;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* Ugham Specific Animations */
+@keyframes floatBadgeIndex {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); box-shadow: 0 15px 35px rgba(124,58,237,0.2); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.floating-badge { 
+  animation: floatBadgeIndex 4s ease-in-out infinite alternate !important; 
+}
+.floating-badge.badge-1 { top: 10%; left: -10%; animation-delay: 0s !important; }
+.floating-badge.badge-2 { top: 30%; right: -5%; animation-delay: 1s !important; }
+.floating-badge.badge-3 { bottom: 30%; left: -5%; animation-delay: 2s !important; }
+.floating-badge.badge-4 { bottom: 10%; right: 5%; animation-delay: 3s !important; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
